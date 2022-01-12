@@ -1,6 +1,6 @@
 import { ActionType } from 'typesafe-actions'
 
-import * as actions from './actions'
+import * as actions from './store/actions'
 
 export type ReduxState = {
   isDropdownMenuVisible: boolean,
