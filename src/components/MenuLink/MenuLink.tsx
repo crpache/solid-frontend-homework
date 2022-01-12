@@ -9,7 +9,7 @@ type Props = {
 
 const MenuLink = ({ icon, text, onClick, red }: Props) => (
   <Wrapper onClick={onClick} red={red} >
-    <i className="material-icons">{icon}</i>
+    <i className="material-icons-outlined">{icon}</i>
     <Label>{text}</Label>
   </Wrapper>
 );

@@ -1,12 +1,12 @@
 import MenuLink from "../MenuLink";
 import Companies from "../Companies";
-import { Wrapper, Separator } from './DropdownMenu.style'
+import { Wrapper, Separator } from "./DropdownMenu.style";
 
-const DropdownMenu = ({
-  handleOpenModal,
-}: {
+type props = {
   handleOpenModal: () => void;
-}) => (
+};
+
+const DropdownMenu = ({ handleOpenModal }: props) => (
   <Wrapper>
     <Companies />
     <MenuLink text="Get the mobile app" icon="phone_iphone" />

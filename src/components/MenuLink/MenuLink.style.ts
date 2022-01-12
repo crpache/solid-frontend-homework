@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-interface props {
-  red?: boolean
-}
-export const Wrapper = styled.button<props>`
+export const Wrapper = styled.button<{
+  red?: boolean;
+}>`
   display: flex;
   align-items: center;
   padding: 12px 16px;
@@ -11,7 +10,7 @@ export const Wrapper = styled.button<props>`
   cursor: pointer;
   border: none;
   background: transparent;
-  color: ${(props) => props.red ? props.theme.colors.red : 'inherit'};
+  color: ${(props) => (props.red ? props.theme.colors.red : "inherit")};
   outline: none;
   :hover {
     background: ${(props) => props.theme.colors.grey1};

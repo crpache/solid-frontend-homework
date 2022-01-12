@@ -13,4 +13,6 @@ export type Action = ActionType<typeof actions>
 export type Company = {
   id: number,
   name: string,
+  onClick?: (id: number) => void,
+  isSelected?: boolean,
 }
