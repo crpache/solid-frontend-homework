@@ -23,7 +23,8 @@ const App = () => {
 
   const handleConnectToWallet = async () => {
     try {
-      const accounts = await window.ethereum.request({ method: 'eth_accounts' });
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      console.log({accounts})
       setIsMetamaskConnected(accounts.length > 0);
     } catch (err) {
       setIsMetamaskConnected(false);
