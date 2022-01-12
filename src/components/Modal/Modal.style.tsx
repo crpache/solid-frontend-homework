@@ -20,6 +20,7 @@ export const ModalWrapper = styled.div`
   background: ${(props) => props.theme.colors.white};
   flex-direction: column;
   min-height: 212px;
+  max-width: 90vw;
   width: 600px;
   box-shadow: 0px 4px 16px rgba(51, 51, 51, 0.24);
   border-radius: 8px;
