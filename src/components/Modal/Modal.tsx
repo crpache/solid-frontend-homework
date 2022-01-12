@@ -14,21 +14,25 @@ import {
   ErrorMessage,
 } from "./Modal.style";
 
-const Modal = ({
-  isMetamaskConnected = false,
-  handleConnectToWallet,
-  handleGetBalance,
-  handleOnClose,
-  balance,
-  isInvalidAddress,
-}: {
+type props = {
+  isMetamaskNotInstalled: boolean;
   isMetamaskConnected: boolean;
   handleConnectToWallet: () => void;
   handleGetBalance: (address: string) => void;
   handleOnClose: () => void;
   balance?: string;
   isInvalidAddress: boolean;
-}) => {
+};
+
+const Modal = ({
+  isMetamaskNotInstalled = false,
+  isMetamaskConnected = false,
+  handleConnectToWallet,
+  handleGetBalance,
+  handleOnClose,
+  balance,
+  isInvalidAddress,
+}: props) => {
   const [address, setAddress] = useState("");
   return (
     <Backdrop>
@@ -40,13 +44,8 @@ const Modal = ({
           </CloseButton>
         </ModalHeader>
         <ModalContent>
-          {!isMetamaskConnected && (
-            <ModalButton
-              onClick={(e) => {
-                e.preventDefault();
-                handleConnectToWallet();
-              }}
-            >
+          {!isMetamaskConnected && !isMetamaskNotInstalled && (
+            <ModalButton onClick={handleConnectToWallet}>
               Connect with Metamask
             </ModalButton>
           )}
@@ -75,15 +74,25 @@ const Modal = ({
                 <CurrencySymbol>ETH</CurrencySymbol>
               </InputWrapper>
               <ModalButton
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleGetBalance(address);
-                }}
+                onClick={() => handleGetBalance(address)}
                 disabled={!address}
               >
                 Get balance
               </ModalButton>
               {isInvalidAddress && <ErrorMessage>Invalid address</ErrorMessage>}
+            </>
+          )}
+          {isMetamaskNotInstalled && (
+            <>
+              <p>Please install MetaMask on your browser</p>
+              <ModalButton
+                onClick={() => {
+                  window.open("https://metamask.io/", "_blank");
+                  handleOnClose();
+                }}
+              >
+                Install
+              </ModalButton>
             </>
           )}
         </ModalContent>

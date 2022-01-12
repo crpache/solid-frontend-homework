@@ -44,7 +44,7 @@ export const CloseButton = styled.i`
   cursor: pointer;
 `;
 
-export const ModalContent = styled.form`
+export const ModalContent = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
