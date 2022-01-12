@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownLink /> renders with dropdown menu 1`] = `
+<styled.div>
+  <styled.div
+    data-test-nav-link={true}
+    onClick={[MockFunction]}
+  >
+    <styled.div>
+      <styled.p>
+        Elon Musk
+      </styled.p>
+      <styled.p>
+        Viljatootja AS
+      </styled.p>
+    </styled.div>
+    <styled.i
+      className="material-icons-outlined"
+    >
+      settings
+    </styled.i>
+  </styled.div>
+  <DropdownMenu />
+</styled.div>
+`;
+
+exports[`<DropdownLink /> renders without dropdown menu 1`] = `
+<styled.div>
+  <styled.div
+    data-test-nav-link={true}
+    onClick={[MockFunction]}
+  >
+    <styled.div>
+      <styled.p>
+        Elon Musk
+      </styled.p>
+      <styled.p>
+        Viljatootja AS
+      </styled.p>
+    </styled.div>
+    <styled.i
+      className="material-icons-outlined"
+    >
+      settings
+    </styled.i>
+  </styled.div>
+</styled.div>
+`;

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownMenu /> renders menu 1`] = `
+<styled.div>
+  <Connect(Companies) />
+  <MenuLink
+    icon="phone_iphone"
+    text="Get the mobile app"
+  />
+  <MenuLink
+    icon="people"
+    text="Community"
+  />
+  <MenuLink
+    icon="book"
+    text="Knowledge base"
+  />
+  <styled.hr />
+  <MenuLink
+    icon="settings"
+    text="Settings"
+  />
+  <MenuLink
+    icon="account_balance_wallet"
+    text="Connect to wallet"
+  />
+  <MenuLink
+    icon="exit_to_app"
+    red={true}
+    text="Log out"
+  />
+</styled.div>
+`;
