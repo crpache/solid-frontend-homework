@@ -10,14 +10,14 @@ export const Backdrop = styled.section`
   z-index: 1000;
   top: 0;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   padding: 0px 4rem;
   background-color: rgba(51, 51, 51, 0.24);
 `;
 
 export const ModalWrapper = styled.div`
   display: flex;
-  background: #fff;
+  background: ${(props) => props.theme.colors.white};
   flex-direction: column;
   min-height: 212px;
   width: 600px;
@@ -55,7 +55,7 @@ export const ModalContent = styled.form`
 
 export const ModalButton = styled.button`
   background: #37a447;
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
   padding: 8px 16px;
   border-radius: 8px;
   font-size: 14px;
@@ -91,10 +91,10 @@ export const CurrencySymbol = styled.span`
   width: 0;
   left: -40px;
   color: #646468;
-`
+`;
 
 export const ErrorMessage = styled.p`
   font-size: 14px;
   font-weight: bold;
-  color: #af0419;
-`
+  color: ${(props) => props.theme.colors.red}; ;
+`;

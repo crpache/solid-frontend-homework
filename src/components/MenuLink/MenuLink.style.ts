@@ -10,7 +10,7 @@ export const Wrapper = styled.button<props>`
   gap: 4px;
   cursor: pointer;
   border: none;
-  background: ${(props) => props.theme.colors.white};
+  background: transparent;
   color: ${(props) => props.red ? props.theme.colors.red : 'inherit'};
   outline: none;
   :hover {

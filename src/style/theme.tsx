@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
     font-size: 14px;
     color: #333;
+    margin: 0;
   }
 
   button {

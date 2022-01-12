@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: end;
   gap: 10px;
+  margin: 10px;
 `;
 
 export const NavLink = styled.div`
