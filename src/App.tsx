@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ethers } from "ethers";
 import { TOKEN_ADDRESS, ABI } from "./contracts/token";
-import "./stylesheets/index.scss";
 
 import DropdownLink from "./components/DropdownLink";
 import Modal from "./components/Modal";
