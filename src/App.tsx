@@ -32,7 +32,7 @@ const App = () => {
     } else {
       setIsMetamaskNotInstalled(true);
     }
-  }, [network]);
+  }, [network]); // create new provider when newtwork changes
 
   const handleConnectToWallet = async () => {
     try {
