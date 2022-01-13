@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
 import { ReduxState, Company } from "../../types";
-import { getCompanies, getSelectedCompany } from "../../store/selectors";
+import { getCompanies, getSelectedCompanyId } from "../../store/selectors";
 import { setSelectedCompanyId } from "../../store/actions";
 
 import CompanyLink from "../CompanyLink";
@@ -10,7 +10,7 @@ import { Title } from "./Companies.style";
 
 type ReduxProps = {
   companies: Array<Company>;
-  selectedCompany: number | null;
+  selectedCompanyId: number | null;
 };
 
 type DispatchProps = {
@@ -19,7 +19,7 @@ type DispatchProps = {
 
 export const Companies = ({
   companies,
-  selectedCompany,
+  selectedCompanyId,
   setSelectedCompanyId,
 }: ReduxProps & DispatchProps) => (
   <>
@@ -30,7 +30,7 @@ export const Companies = ({
         id={company.id}
         name={company.name}
         onClick={setSelectedCompanyId}
-        isSelected={selectedCompany === company.id}
+        isSelected={selectedCompanyId === company.id}
       />
     ))}
   </>
@@ -39,7 +39,7 @@ export const Companies = ({
 export default connect(
   createStructuredSelector<ReduxState, ReduxProps>({
     companies: getCompanies,
-    selectedCompany: getSelectedCompany,
+    selectedCompanyId: getSelectedCompanyId,
   }),
   { setSelectedCompanyId }
 )(Companies);
